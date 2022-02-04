@@ -1,10 +1,24 @@
 # List Materi Using Material UI & React JS
 
-![list](https://user-images.githubusercontent.com/69864986/152468045-b5ddc6f1-6077-4d2a-a705-c707cd3fb138.png)
+![list3](https://user-images.githubusercontent.com/69864986/152486008-6bcd660c-dc8d-4e8e-bd8e-f7b2e3353fc5.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Today Todo (Friday, 2/4/2022)
+
+1. Update Navbar
+2. Update List Card
+3. Update Image Card
+
 ## Available Scripts
+
+Before run this project, you need to type this in terminal :
+
+### `npm install`
+
+For install node_modules.
+
+---
 
 In the project directory, you can run:
 

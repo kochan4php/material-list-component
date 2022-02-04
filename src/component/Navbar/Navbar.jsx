@@ -1,7 +1,6 @@
 import * as React from "react";
-import { AppBar, Typography, IconButton, Container } from "@mui/material";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import { Link } from "react-router-dom";
+import { AppBar, Typography, Container } from "@mui/material";
+import Navigation from "./Navigation";
 
 const Navbar = ({ bgcolor, color }) => {
   return (
@@ -17,19 +16,7 @@ const Navbar = ({ bgcolor, color }) => {
           component="div"
           sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
         >
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <IconButton className="materi-page-title-btn">
-              <ArrowBackIosNewIcon sx={{ color: color }} />
-              &nbsp;
-              <Typography
-                variant="h6"
-                className="materi-page-title-btn-txt"
-                sx={{ color: color }}
-              >
-                Materi
-              </Typography>
-            </IconButton>
-          </Link>
+          <Navigation color={color} />
         </Typography>
         <Typography
           variant="h6"
@@ -37,19 +24,7 @@ const Navbar = ({ bgcolor, color }) => {
           component="div"
           sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
         >
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <IconButton className="materi-page-title-btn">
-              <ArrowBackIosNewIcon sx={{ color: color }} />
-              &nbsp;
-              <Typography
-                variant="h6"
-                className="materi-page-title-btn-txt"
-                sx={{ color: color }}
-              >
-                Materi
-              </Typography>
-            </IconButton>
-          </Link>
+          <Navigation color={color} />
         </Typography>
       </Container>
     </AppBar>
