@@ -106,8 +106,8 @@
   .materi-page-card-content
   .materi-page-card-content-info
   span {
-  border-radius: 2px;
-  padding: 0 0.7em;
+  border-radius: 3px;
+  padding: 0.15em 0.7em;
   color: #333;
 }
 
