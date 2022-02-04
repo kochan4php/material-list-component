@@ -6,7 +6,7 @@ import Javascript from "../../Assets/img/javascript.png";
 const lotsOfData = [
   {
     img: Javascript,
-    title: "Algoritma & Struktur Data Javascript",
+    title: "Materi Lengkap Ujian Kenaikan Sabuk Putih",
     valueRating: 5,
     rating: 200,
     price: "Rp 999.000,00",
@@ -14,7 +14,7 @@ const lotsOfData = [
   },
   {
     img: ReactJS,
-    title: "Belajar React JS",
+    title: "Latihan Dasar Kumite",
     valueRating: 3,
     rating: 200,
     price: "Rp 999.000,00",
@@ -22,14 +22,14 @@ const lotsOfData = [
   },
   {
     img: Ruby,
-    title: "Belajar Ruby",
+    title: "Materi Lengkap Ujian Kenaikan Sabuk Putih",
     valueRating: 5,
     rating: 200,
     info: "Free",
   },
   {
     img: PHP,
-    title: "Belajar PHP",
+    title: "Materi Lengkap Ujian Kenaikan Sabuk Putih",
     valueRating: 4,
     rating: 200,
     price: "Rp 999.000,00",

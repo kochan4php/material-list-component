@@ -17,14 +17,15 @@ const Data = () => {
         <Grid
           item
           xs={12}
-          md={6}
-          lg={4}
+          sm={6}
+          md={4}
+          lg={3}
           className="materi-page-card"
           key={index}
         >
           <div>
             <Grid container>
-              <Grid item xs={4} sx={{ p: 1, pl: 0 }}>
+              <Grid item xs={4} sx={{ p: 1 }}>
                 <Link to="/home">
                   {data.img && (
                     <CardMedia
@@ -66,7 +67,7 @@ const Data = () => {
                       className="materi-page-card-content-rating-value"
                     />
                     &nbsp;
-                    <p>{data.rating}</p>
+                    <p>({data.rating})</p>
                   </Typography>
                   {data.price && (
                     <Typography
