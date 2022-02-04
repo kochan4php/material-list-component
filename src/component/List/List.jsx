@@ -1,11 +1,20 @@
 import * as React from "react";
-import { Box, Container, Grid, IconButton, TextField } from "@mui/material";
-import TuneIcon from "@mui/icons-material/Tune";
+import {
+  Box,
+  Container,
+  Grid,
+  IconButton,
+  TextField,
+  InputAdornment,
+  Button,
+} from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
 import "./List.css";
 import Data from "./Data";
 import Colors from "../../Theme/Colors";
 import Navbar from "../Navbar/Navbar";
+import { BsSliders } from "react-icons/bs";
 
 const List = () => {
   return (
@@ -15,7 +24,7 @@ const List = () => {
         <Box sx={{ flexGrow: 1 }} className="materi-page">
           <Grid container sx={{ mt: 1 }}>
             <form action="" method="post">
-              <Grid item xs={10} className="materi-page-search-field">
+              <Grid item xs={10.5} className="materi-page-search-field">
                 <Box component="form" noValidate autoComplete="off">
                   <TextField
                     id="outlined"
@@ -23,20 +32,36 @@ const List = () => {
                     variant="outlined"
                     size="small"
                     fullWidth
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <SearchIcon sx={{ fontSize: 30 }} />
+                        </InputAdornment>
+                      ),
+                    }}
                   />
                 </Box>
               </Grid>
               <Grid
                 item
-                xs={2}
-                align="center"
+                xs={1.5}
+                align="right"
                 className="materi-page-btn-field"
               >
-                <Link to="/">
-                  <IconButton className="materi-page-icon-btn">
-                    <TuneIcon sx={{ fontSize: "1.65em" }} />
-                  </IconButton>
-                </Link>
+                {window.innerWidth < 599 ? (
+                  <Link to="/">
+                    <IconButton className="materi-page-icon-btn">
+                      <BsSliders style={{ fontSize: "1.5em" }} />
+                    </IconButton>
+                  </Link>
+                ) : (
+                  <Button
+                    variant="contained"
+                    sx={{ height: "100%", width: "90%" }}
+                  >
+                    Medium
+                  </Button>
+                )}
               </Grid>
             </form>
             <Data />
