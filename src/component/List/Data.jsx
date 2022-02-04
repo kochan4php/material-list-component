@@ -64,6 +64,7 @@ const Data = () => {
                     <Rating
                       name="simple-controlled"
                       value={data.valueRating}
+                      readOnly
                       className="materi-page-card-content-rating-value"
                     />
                     &nbsp;
