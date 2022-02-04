@@ -27,7 +27,6 @@ const List = () => {
               <Grid item xs={10.5} className="materi-page-search-field">
                 <Box component="form" noValidate autoComplete="off">
                   <TextField
-                    id="outlined"
                     placeholder="Search"
                     variant="outlined"
                     size="small"

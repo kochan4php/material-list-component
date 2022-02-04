@@ -19,13 +19,13 @@ const Data = () => {
           xs={12}
           sm={6}
           md={4}
-          lg={3}
+          xl={3}
           className="materi-page-card"
           key={index}
         >
           <div>
             <Grid container>
-              <Grid item xs={4} sx={{ p: 1 }}>
+              <Grid item xs={4} sx={{ p: 1, pl: 0 }}>
                 <Link to="/home">
                   {data.img && (
                     <CardMedia

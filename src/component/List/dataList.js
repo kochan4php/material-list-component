@@ -1,8 +1,8 @@
-import DummyImg from "../../Assets/img/dummyimg.webp";
+import React from "../../Assets/img/react.png";
 
 const lotsOfData = [
   {
-    img: DummyImg,
+    img: React,
     title: "Materi Lengkap Ujian Kenaikan Sabuk Putih",
     valueRating: 5,
     rating: 200,
@@ -10,7 +10,7 @@ const lotsOfData = [
     info: "Terpopuler & Baru",
   },
   {
-    img: DummyImg,
+    img: React,
     title: "Latihan Dasar Kumite",
     valueRating: 3,
     rating: 200,
@@ -18,14 +18,14 @@ const lotsOfData = [
     info: "Terlaris",
   },
   {
-    img: DummyImg,
+    img: React,
     title: "Materi Lengkap Ujian Kenaikan Sabuk Putih",
     valueRating: 5,
     rating: 200,
     info: "Free",
   },
   {
-    img: DummyImg,
+    img: React,
     title: "Materi Lengkap Ujian Kenaikan Sabuk Putih",
     valueRating: 4,
     rating: 200,

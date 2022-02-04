@@ -2,9 +2,12 @@
   padding-bottom: 1.5em;
 }
 
+#root .App .materi-page-title {
+  padding: 0.5em 0;
+}
+
 #root .App .materi-page-title .materi-page-title-btn {
   border-radius: 0;
-  color: #000;
   padding: 0;
   padding-right: 10px;
   text-decoration: none;
@@ -36,14 +39,14 @@
 }
 
 #root .App .materi-page .materi-page-card .materi-page-card-img {
-  /* background-color: #333; */
+  background-color: #333;
   border-radius: 5px;
 }
 
 #root .App .materi-page .materi-page-card .materi-page-card-content {
-  padding: 0;
-  padding-left: 0.5em;
-  padding-top: 0.3em;
+  padding: 0.3em 0;
+  /* padding-left: 0.5em;
+  padding-top: 0.3em; */
 }
 
 #root
