@@ -56,9 +56,14 @@ const List = () => {
                 ) : (
                   <Button
                     variant="contained"
-                    sx={{ height: "100%", width: "90%" }}
+                    sx={{
+                      height: "100%",
+                      width: "90%",
+                      textTransform: "capitalize",
+                      bgcolor: Colors.tangerine,
+                    }}
                   >
-                    Medium
+                    Search
                   </Button>
                 )}
               </Grid>
