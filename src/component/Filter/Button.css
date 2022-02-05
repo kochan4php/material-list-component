@@ -1,0 +1,21 @@
+#root .App .filter-page .filter-page-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#root .App .filter-page #btn.clicked {
+  background-color: #f78104;
+  color: #fff;
+}
+
+#root .App .filter-page #btn {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  text-transform: capitalize;
+  background-color: #fff;
+}
+
+#root .App .filter-page #btn:hover {
+  border-color: #f78104;
+}

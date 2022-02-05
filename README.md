@@ -1,7 +1,8 @@
 # List Materi Using Material UI & React JS
 
-![list4](https://user-images.githubusercontent.com/69864986/152508642-4d130a3d-ede9-4fcb-b23b-cc12b74c007b.png)
-![detail3](https://user-images.githubusercontent.com/69864986/152630725-b510ee9e-1148-455d-91b2-53c19979c95f.png)
+![list6](https://user-images.githubusercontent.com/69864986/152652212-f0d52315-e5b1-4622-9869-f54b9a10b830.png)
+![filter](https://user-images.githubusercontent.com/69864986/152652289-19edfda0-c6e2-4672-81f1-06591f430f4b.png)
+![detail5](https://user-images.githubusercontent.com/69864986/152652281-94199df3-7f12-42f9-a3e5-01414c9ae540.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -15,6 +16,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. Create Detail Page
 2. Modularization
+
+## Todo (Sunday, 2/6/2022)
+
+1. Create Filter Page
+2. Styling Filter Page
+3. Modularization
 
 ## Available Scripts
 
