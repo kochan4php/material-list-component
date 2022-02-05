@@ -6,7 +6,6 @@ import {
   IconButton,
   TextField,
   InputAdornment,
-  Button,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
@@ -14,12 +13,14 @@ import "./List.css";
 import Data from "./Data";
 import Colors from "../../Theme/Colors";
 import Navbar from "../Navbar/Navbar";
-import { BsSliders } from "react-icons/bs";
+import TuneIcon from "@mui/icons-material/Tune";
 
 const List = () => {
   return (
     <>
-      <Navbar bgcolor={Colors.cadetBlue} color={Colors.white} />
+      <Navbar bgcolor={Colors.cadetBlue} color={Colors.white} mb={3}>
+        Materi
+      </Navbar>
       <Container>
         <Box sx={{ flexGrow: 1 }} className="materi-page">
           <Grid container sx={{ mt: 1 }}>
@@ -31,10 +32,13 @@ const List = () => {
                     variant="outlined"
                     size="small"
                     fullWidth
+                    sx={{ borderColor: Colors.cadetBlue }}
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
-                          <SearchIcon sx={{ fontSize: 30 }} />
+                          <SearchIcon
+                            sx={{ fontSize: 30, color: Colors.cadetBlue }}
+                          />
                         </InputAdornment>
                       ),
                     }}
@@ -47,25 +51,14 @@ const List = () => {
                 align="right"
                 className="materi-page-btn-field"
               >
-                {window.innerWidth < 599 ? (
-                  <Link to="/">
-                    <IconButton className="materi-page-icon-btn">
-                      <BsSliders style={{ fontSize: "1.5em" }} />
-                    </IconButton>
-                  </Link>
-                ) : (
-                  <Button
-                    variant="contained"
-                    sx={{
-                      height: "100%",
-                      width: "90%",
-                      textTransform: "capitalize",
-                      bgcolor: Colors.tangerine,
-                    }}
-                  >
-                    Search
-                  </Button>
-                )}
+                <Link to="/">
+                  <IconButton className="materi-page-icon-btn">
+                    <TuneIcon
+                      fontSize="large"
+                      style={{ color: Colors.cadetBlue }}
+                    />
+                  </IconButton>
+                </Link>
               </Grid>
             </form>
             <Data />

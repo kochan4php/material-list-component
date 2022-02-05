@@ -26,7 +26,7 @@ const Data = () => {
           <div>
             <Grid container>
               <Grid item xs={4} sx={{ p: 1, pl: 0 }}>
-                <Link to="/home">
+                <Link to="/detail">
                   {data.img && (
                     <CardMedia
                       component="img"
@@ -47,7 +47,7 @@ const Data = () => {
               </Grid>
               <Grid item xs={8}>
                 <CardContent className="materi-page-card-content">
-                  <Link to="/" className="materi-page-card-content-title">
+                  <Link to="/detail" className="materi-page-card-content-title">
                     <Typography
                       variant="h6"
                       component="h1"
