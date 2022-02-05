@@ -5,7 +5,8 @@ import Colors from "../../Theme/Colors";
 const Filter = () => {
   return (
     <>
-      <Navbar bgcolor={Colors.cadetBlue} color={Colors.white}>
+      {/* props path in navbar component is required!!! */}
+      <Navbar bgcolor={Colors.cadetBlue} color={Colors.white} path="/">
         Filter
       </Navbar>
     </>

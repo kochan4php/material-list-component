@@ -20,7 +20,8 @@ const Detail = () => {
 
   return (
     <>
-      <Navbar bgcolor={Colors.cadetBlue} color={Colors.white} mb={0} path="">
+      {/* props path in navbar component is required!!! */}
+      <Navbar bgcolor={Colors.cadetBlue} color={Colors.white} mb={1} path="/">
         Detail
       </Navbar>
       <Container>
@@ -29,7 +30,7 @@ const Detail = () => {
             <Grid item xs={12} sm={6} className="detail-page-card">
               <div>
                 <Grid container>
-                  <Grid item xs={4} sx={{ py: 1 }}>
+                  <Grid item xs={4} sx={{ pb: 1 }}>
                     <CardMedia
                       component="img"
                       image={ReactJS}
@@ -68,6 +69,7 @@ const Detail = () => {
                       <Typography
                         variant="body2"
                         fontSize="12px"
+                        sx={{ mb: 0.5 }}
                         className="detail-page-card-content-sale"
                       >
                         171 Terjual
@@ -75,34 +77,34 @@ const Detail = () => {
                       <Typography
                         variant="body"
                         fontWeight={600}
-                        fontSize="15px"
+                        fontSize="17px"
                         className="detail-page-card-content-price"
                       >
                         Rp 999.999
                       </Typography>
                     </CardContent>
                   </Grid>
+                  <Grid item xs={12} mt={0.8}>
+                    <Button
+                      variant="contained"
+                      fullWidth
+                      sx={{
+                        textTransform: "capitalize",
+                        bgcolor: Colors.tangerine,
+                        boxShadow: "none",
+                        "&:hover": {
+                          backgroundColor: Colors.tangerine,
+                          boxShadow: "none",
+                        },
+                      }}
+                    >
+                      Buy Now
+                    </Button>
+                  </Grid>
                 </Grid>
               </div>
             </Grid>
-            <Grid item xs={12} mb={3}>
-              <Button
-                variant="contained"
-                fullWidth
-                sx={{
-                  textTransform: "capitalize",
-                  bgcolor: Colors.tangerine,
-                  boxShadow: "none",
-                  "&:hover": {
-                    backgroundColor: Colors.tangerine,
-                    boxShadow: "none",
-                  },
-                }}
-              >
-                Buy Now
-              </Button>
-            </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6} sx={{ py: 1 }}>
               <Typography varian="h6" mb={1} fontWeight="bold">
                 Deskripsi
               </Typography>

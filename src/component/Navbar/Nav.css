@@ -1,0 +1,16 @@
+#root .App .nav-title {
+  padding: 0.5em 0;
+}
+
+#root .App .nav-title .nav-title-btn {
+  border-radius: 0;
+  padding: 0;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+#root .App .nav-title .nav-title-btn-txt {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9em;
+}

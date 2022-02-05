@@ -1,5 +1,5 @@
 import List from "./component/ListMateri/List";
-import Filter from "./component/Filter/Filter";
+// import Filter from "./component/Filter/Filter";
 import Detail from "./component/DetailMateri/Detail";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 

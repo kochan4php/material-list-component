@@ -18,7 +18,8 @@ import TuneIcon from "@mui/icons-material/Tune";
 const List = () => {
   return (
     <>
-      <Navbar bgcolor={Colors.cadetBlue} color={Colors.white} mb={3}>
+      {/* props path in navbar component is required!!! */}
+      <Navbar bgcolor={Colors.cadetBlue} color={Colors.white} mb={3} path="/">
         Materi
       </Navbar>
       <Container>

@@ -2,33 +2,37 @@ import * as React from "react";
 import { AppBar, Typography, Container } from "@mui/material";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
+import "./Nav.css";
 
+//! props path is required!!!
 const Navbar = ({ bgcolor, color, children, mb, path }) => {
   return (
     <AppBar
       position="static"
       sx={{ bgcolor, mb, boxShadow: 0 }}
-      className="materi-page-title"
+      className="nav-title"
     >
       <Container>
-        <Link to={`/${path}`}>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-          >
+        <Typography
+          variant="h6"
+          noWrap
+          sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+        >
+          {/* props path is required!!! */}
+          <Link to={path} style={{ textDecoration: "none" }}>
             <Navigation color={color}>{children}</Navigation>
-          </Typography>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-          >
+          </Link>
+        </Typography>
+        <Typography
+          variant="h6"
+          noWrap
+          sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+        >
+          {/* props path is required!!! */}
+          <Link to={path} style={{ textDecoration: "none" }}>
             <Navigation color={color}>{children}</Navigation>
-          </Typography>
-        </Link>
+          </Link>
+        </Typography>
       </Container>
     </AppBar>
   );

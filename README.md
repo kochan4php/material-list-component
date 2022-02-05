@@ -1,14 +1,20 @@
 # List Materi Using Material UI & React JS
 
 ![list4](https://user-images.githubusercontent.com/69864986/152508642-4d130a3d-ede9-4fcb-b23b-cc12b74c007b.png)
+![detail3](https://user-images.githubusercontent.com/69864986/152630725-b510ee9e-1148-455d-91b2-53c19979c95f.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Today Todo (Friday, 2/4/2022)
+## Todo (Friday, 2/4/2022)
 
 1. Update Navbar
 2. Update List Card
 3. Update Image Card
+
+## Todo (Saturday, 2/5/2022)
+
+1. Create Detail Page
+2. Modularization
 
 ## Available Scripts
 
