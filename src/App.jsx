@@ -8,9 +8,9 @@ export default function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route exact path="/" component={List} />
+          {/* <Route exact path="/" component={List} /> */}
           {/* <Route exact path="/" component={Filter} /> */}
-          {/* <Route exact path="/" component={Detail} /> */}
+          <Route exact path="/" component={Detail} />
         </Switch>
       </div>
     </Router>
