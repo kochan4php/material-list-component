@@ -1,27 +1,10 @@
 # List Materi Using Material UI & React JS
 
-![list6](https://user-images.githubusercontent.com/69864986/152652212-f0d52315-e5b1-4622-9869-f54b9a10b830.png)
-![filter](https://user-images.githubusercontent.com/69864986/152652289-19edfda0-c6e2-4672-81f1-06591f430f4b.png)
-![detail5](https://user-images.githubusercontent.com/69864986/152652281-94199df3-7f12-42f9-a3e5-01414c9ae540.png)
+![list7](https://user-images.githubusercontent.com/69864986/152905766-b469f344-f407-412b-bb24-52bfefb72670.png)
+![filter2](https://user-images.githubusercontent.com/69864986/152905816-4a6a549c-b0c7-4621-88e1-5beb97a05205.png)
+![detail6](https://user-images.githubusercontent.com/69864986/152905879-cba63b60-11a7-44a1-a68b-38a25e4d48d2.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Todo (Friday, 2/4/2022)
-
-1. Update Navbar
-2. Update List Card
-3. Update Image Card
-
-## Todo (Saturday, 2/5/2022)
-
-1. Create Detail Page
-2. Modularization
-
-## Todo (Sunday, 2/6/2022)
-
-1. Create Filter Page
-2. Styling Filter Page
-3. Modularization
 
 ## Available Scripts
 

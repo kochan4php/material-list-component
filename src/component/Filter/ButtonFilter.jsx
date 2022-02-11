@@ -16,9 +16,21 @@ const usia = ["6-14 Tahun", "15-18 Tahun"];
 const harga = ["Gratis", "Berbayar"];
 const jenisFile = ["PDF", "Teks", "Video"];
 
+const styleBTN = {
+  marginRight: "8px",
+  marginBottom: "8px",
+  borderRadius: "4px",
+  textTransform: "capitalize",
+  backgroundColor: "#fff",
+  borderColor: Colors.tangerine,
+  color: Colors.tangerine,
+
+  "&:hover": { borderColor: "#f78104" },
+  "&:checked": { backgroundColor: "#f78104", color: "#fff" },
+};
+
 const handleClick = (e) => {
   e.target.classList.toggle("clicked");
-  console.log(e);
 };
 
 const ButtonFilter = () => {
@@ -31,7 +43,7 @@ const ButtonFilter = () => {
         {tingkatanSabuk.map((ts, index) => (
           <Button
             variant="outlined"
-            sx={{ borderColor: Colors.tangerine, color: Colors.tangerine }}
+            sx={styleBTN}
             id="btn"
             key={index}
             value={ts}
@@ -48,7 +60,7 @@ const ButtonFilter = () => {
         {kategori.map((k, index) => (
           <Button
             variant="outlined"
-            sx={{ borderColor: Colors.tangerine, color: Colors.tangerine }}
+            sx={styleBTN}
             id="btn"
             key={index}
             value={k}
@@ -65,11 +77,7 @@ const ButtonFilter = () => {
         {usia.map((u, index) => (
           <Button
             variant="outlined"
-            sx={{
-              borderColor: Colors.tangerine,
-              color: Colors.tangerine,
-              px: 4,
-            }}
+            sx={styleBTN}
             id="btn"
             key={index}
             value={u}
@@ -86,7 +94,7 @@ const ButtonFilter = () => {
         {harga.map((h, index) => (
           <Button
             variant="outlined"
-            sx={{ borderColor: Colors.tangerine, color: Colors.tangerine }}
+            sx={styleBTN}
             id="btn"
             key={index}
             value={h}
@@ -103,7 +111,7 @@ const ButtonFilter = () => {
         {jenisFile.map((jf, index) => (
           <Button
             variant="outlined"
-            sx={{ borderColor: Colors.tangerine, color: Colors.tangerine }}
+            sx={styleBTN}
             id="btn"
             key={index}
             value={jf}

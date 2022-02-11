@@ -5,7 +5,7 @@ import ButtonFilter from "./ButtonFilter";
 import { Container, Grid } from "@mui/material";
 import "./Filter.css";
 
-const Filter = () => {
+const Filter = ({ onClose }) => {
   React.useEffect(() => {
     document.body.classList.add("filter");
     return function () {
