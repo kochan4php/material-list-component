@@ -25,7 +25,6 @@ import lotsOfData from "./dataList";
 import {
   style,
   styleBtn,
-  styleTextField,
   appbarStyle,
   iconButtonStyle,
   navTitleStyle,
@@ -62,6 +61,7 @@ const List = () => {
       btnStyle.color = Colors.tangerine;
     }
 
+    //? Filter logic
     let fselected = [...filter];
     let selectedTrue = filter.includes(e.target.value);
 
@@ -79,7 +79,7 @@ const List = () => {
     filterData(value);
   };
 
-  // LiveSearch logic
+  //? LiveSearch logic
   const filterData = (value) => {
     const lowerCaseValue = value.toLowerCase().trim();
     if (!lowerCaseValue) {
@@ -93,10 +93,6 @@ const List = () => {
       setData(filteredData);
     }
   };
-
-  React.useEffect(() => {
-    console.log(filter);
-  }, [filter]);
 
   if (open) {
     return (
@@ -261,7 +257,6 @@ const List = () => {
         <Navbar bgcolor={Colors.cadetBlue} color={Colors.white} mb={3} path="/">
           Materi
         </Navbar>
-
         <Container>
           <Box sx={{ flexGrow: 1 }} className="materi-page">
             <Grid container sx={{ mt: 1 }}>
@@ -273,14 +268,11 @@ const List = () => {
                       variant="outlined"
                       size="small"
                       fullWidth
-                      sx={styleTextField}
                       onChange={(e) => handleChange(e.target.value)}
                       InputProps={{
                         startAdornment: (
                           <InputAdornment position="start">
-                            <SearchIcon
-                              sx={{ fontSize: 30, color: Colors.cadetBlue }}
-                            />
+                            <SearchIcon sx={{ fontSize: 30 }} />
                           </InputAdornment>
                         ),
                       }}
@@ -293,17 +285,12 @@ const List = () => {
                   align="right"
                   className="materi-page-btn-field"
                 >
-                  <Link to="/">
-                    <IconButton
-                      className="materi-page-icon-btn"
-                      onClick={handleOpen}
-                    >
-                      <TuneIcon
-                        fontSize="large"
-                        style={{ color: Colors.cadetBlue }}
-                      />
-                    </IconButton>
-                  </Link>
+                  <IconButton
+                    className="materi-page-icon-btn"
+                    onClick={handleOpen}
+                  >
+                    <TuneIcon fontSize="large" />
+                  </IconButton>
                 </Grid>
               </form>
               {data.map((d, index) => (
@@ -319,29 +306,37 @@ const List = () => {
                   <div>
                     <Grid container>
                       <Grid item xs={4} sx={{ p: 1, pl: 0 }}>
-                        <Link to="/">
-                          {d.img && (
-                            <CardMedia
-                              component="img"
-                              image={d.img}
-                              alt={d.title}
-                              className="materi-page-card-img"
-                            />
-                          )}
-                          {d.video && (
-                            <CardMedia
-                              component="img"
-                              image={d.thumbnail}
-                              alt={d.title}
-                              className="materi-page-card-img"
-                            />
-                          )}
-                        </Link>
+                        {d.img && (
+                          <CardMedia
+                            component="img"
+                            image={d.img}
+                            alt={d.title}
+                            className="materi-page-card-img"
+                          />
+                        )}
+                        {d.video && (
+                          <CardMedia
+                            component="img"
+                            image={d.thumbnail}
+                            alt={d.title}
+                            className="materi-page-card-img"
+                          />
+                        )}
                       </Grid>
                       <Grid item xs={8}>
                         <CardContent className="materi-page-card-content">
                           <Link
-                            to="/"
+                            to={{
+                              pathname: "/detail",
+                              state: {
+                                id: index,
+                                title: d.title,
+                                img: d.img,
+                                price: d.price,
+                                rating: d.valueRating,
+                                terjual: d.terjual,
+                              },
+                            }}
                             className="materi-page-card-content-title"
                           >
                             <Typography
@@ -364,14 +359,14 @@ const List = () => {
                               className="materi-page-card-content-rating-value"
                             />
                             &nbsp;
-                            <p>({d.rating})</p>
+                            <p>({d.terjual})</p>
                           </Typography>
                           {d.price && (
                             <Typography
                               variant="body2"
                               className="materi-page-card-content-price"
                             >
-                              {d.price}
+                              Rp {d.price}
                             </Typography>
                           )}
                           {d.info === "Terlaris" && (

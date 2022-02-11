@@ -5,8 +5,11 @@ import Colors from "../../Theme/Colors";
 import Content from "./Content";
 import Description from "./Description";
 import "./Detail.css";
+import { useLocation } from "react-router-dom";
 
 const Detail = () => {
+  const query = useLocation();
+
   return (
     <>
       {/* props path in navbar component is required!!! */}
@@ -25,7 +28,12 @@ const Detail = () => {
             >
               <div>
                 <Grid container>
-                  <Content />
+                  <Content
+                    title={query.state.title}
+                    price={query.state.price}
+                    img={query.state.img}
+                    rate={query.state.rating}
+                  />
                 </Grid>
               </div>
             </Grid>

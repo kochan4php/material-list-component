@@ -22,14 +22,6 @@ export const styleBtn = {
   "&:hover": { borderColor: "#f78104" },
 };
 
-export const styleTextField = {
-  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-    border: "1px solid",
-    borderRadius: 7,
-    borderColor: "#999",
-  },
-};
-
 export const appbarStyle = {
   padding: "0.5em 0",
   bgcolor: Colors.cadetBlue,
