@@ -1,39 +1,41 @@
 import React from "../../Assets/img/react.png";
-import Ruby from "../../Assets/img/ruby.png";
-import PHP from "../../Assets/img/php.png";
-import Javascript from "../../Assets/img/javascript.png";
+import Js from "../../Assets/img/javascript.png";
 
 let lotsOfData = [
   {
     img: React,
-    title: "Belajar React JS",
+    title: "Materi Lengkap Ujian Kenaikan Sabuk Putih",
     valueRating: "5",
     terjual: "70",
     price: "299.000,00",
     info: "Terpopuler & Baru",
+    kategori: "Berbayar",
   },
   {
-    img: Javascript,
-    title: "Latihan Dasar Algoritma & Struktur Data Javascript",
+    img: Js,
+    title: "Materi Lengkap Ujian Kenaikan Sabuk Cokelat",
     valueRating: "4",
     terjual: "80",
     price: "399.000,00",
     info: "Terlaris",
+    kategori: "Berbayar",
   },
   {
-    img: Ruby,
-    title: "Materi Lengkap Pemrograman Ruby",
+    img: React,
+    title: "Latihan Dasar Kumite",
     valueRating: "4",
     terjual: "150",
     info: "Free",
+    kategori: "Gratis",
   },
   {
-    img: PHP,
-    title: "Belajar Menjadi Backend Developer dengan PHP",
+    img: React,
+    title: "Latihan Dasar Kumite",
     valueRating: "4",
     terjual: "50",
-    price: "350.000,00",
+    price: "150.000,00",
     info: "Terlaris",
+    kategori: "Berbayar",
   },
 ];
 

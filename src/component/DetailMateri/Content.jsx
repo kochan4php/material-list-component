@@ -29,14 +29,15 @@ const Content = (props) => {
           <Typography
             variant="h6"
             component="h1"
-            fontSize="16px"
+            fontSize="15px"
             lineHeight={1.4}
+            mb={0.5}
           >
             {props.title}
           </Typography>
           <Typography
             variant="body2"
-            fontSize="11px"
+            fontSize="13px"
             className="detail-page-card-content-name"
           >
             Artem Bondar
@@ -54,7 +55,7 @@ const Content = (props) => {
           </Typography>
           <Typography
             variant="body2"
-            fontSize="12px"
+            fontSize="14px"
             sx={{ mb: 0.5 }}
             className="detail-page-card-content-sale"
           >
@@ -80,6 +81,7 @@ const Content = (props) => {
             textTransform: "capitalize",
             bgcolor: Colors.tangerine,
             boxShadow: "none",
+            my: 1,
             "&:hover": {
               backgroundColor: Colors.tangerine,
               boxShadow: "none",

@@ -36,6 +36,7 @@ import {
   harga,
   jenisFile,
 } from "./dataFilter.js";
+import _ from "lodash";
 
 const List = () => {
   const [open, setOpen] = React.useState(false);
@@ -43,10 +44,12 @@ const List = () => {
   const [searchText, setSearchText] = React.useState();
   const [data, setData] = React.useState(lotsOfData);
 
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => {
+    setOpen(true);
+    setFilter([]);
+  };
   const handleClose = () => {
     setOpen(false);
-    setFilter([]);
   };
 
   const handleClick = (e) => {
@@ -72,6 +75,21 @@ const List = () => {
       fselected.push(e.target.value);
       setFilter(fselected);
     }
+
+    let clickQuery = btn.value.toString().toLowerCase();
+
+    let listData = ["title", "info", "price", fselected].map((x, i) => {
+      return lotsOfData.filter((el) => {
+        if (el[x]) {
+          return el[x].toString().toLowerCase().indexOf(clickQuery) !== -1;
+        }
+      });
+    });
+
+    let dataset = _.maxBy(listData, function (o) {
+      return o.length;
+    });
+    setData(dataset);
   };
 
   const handleChange = (value) => {
@@ -81,18 +99,25 @@ const List = () => {
 
   //? LiveSearch logic
   const filterData = (value) => {
-    const lowerCaseValue = value.toLowerCase().trim();
-    if (!lowerCaseValue) {
-      setData(lotsOfData);
-    } else {
-      const filteredData = lotsOfData.filter((item) => {
-        return Object.keys(item).some((key) => {
-          return item[key].toString().toLowerCase().includes(lowerCaseValue);
-        });
+    let searchQuery = value.toString().toLowerCase();
+
+    let listData = ["title", "info", "price", ...filter].map((x, i) => {
+      return lotsOfData.filter((el) => {
+        if (el[x]) {
+          return el[x].toString().toLowerCase().indexOf(searchQuery) !== -1;
+        }
       });
-      setData(filteredData);
-    }
+    });
+
+    let dataset = _.maxBy(listData, function (o) {
+      return o.length;
+    });
+    setData(dataset);
   };
+
+  React.useEffect(() => {
+    console.log(filter);
+  }, [filter]);
 
   if (open) {
     return (
@@ -157,7 +182,10 @@ const List = () => {
                 </Typography>
               </Container>
             </AppBar>
-            <Container className="filter-page">
+            <Container
+              className="filter-page"
+              sx={{ display: "flex", bgcolor: "#ddd" }}
+            >
               <Grid container spacing={2} mt={1}>
                 <Grid item xs={12}>
                   <Typography mb={1} variant="h6" className="filter-page-title">
@@ -402,7 +430,9 @@ const List = () => {
                 </Grid>
               ))}
               {data.length === 0 && (
-                <Typography variant="h3">No data here</Typography>
+                <Typography variant="h5" align="center">
+                  No data here
+                </Typography>
               )}
             </Grid>
           </Box>

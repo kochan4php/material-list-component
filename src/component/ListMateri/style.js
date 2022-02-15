@@ -6,8 +6,8 @@ export const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "100%",
-  height: "100vh",
-  bgcolor: "background.paper",
+  height: "100%",
+  bgcolor: "#ddd",
 };
 
 export const styleBtn = {
@@ -25,7 +25,6 @@ export const styleBtn = {
 export const appbarStyle = {
   padding: "0.5em 0",
   bgcolor: Colors.cadetBlue,
-  mb: 1,
   boxShadow: 0,
 };
 

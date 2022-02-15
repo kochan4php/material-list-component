@@ -15,20 +15,21 @@
 
 #root .App .materi-page .materi-page-card {
   background-color: #fff;
-  padding-bottom: 0.3em;
+  padding-bottom: 0.2em;
   margin-top: 1em;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.2em;
   border: none;
 }
 
 #root .App .materi-page .materi-page-card .materi-page-card-img {
   background-color: #333;
   border-radius: 5px;
+  padding: 0.2em;
 }
 
 #root .App .materi-page .materi-page-card .materi-page-card-content {
-  padding: 0.33em 0;
-  padding-right: 0.7em;
+  padding: 0.5em 1em;
+  /* padding-right: 0.7em; */
   /* padding-top: 0.3em; */
 }
 
@@ -126,6 +127,6 @@
 
 @media (max-width: 599px) {
   #root .App .materi-page .materi-page-card {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   }
 }
