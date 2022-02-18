@@ -4,8 +4,10 @@ import Navbar from "../Navbar/Navbar";
 import Colors from "../../Theme/Colors";
 import Content from "./Content";
 import Description from "./Description";
-import "./Detail.css";
+import Fab from "@mui/material/Fab";
+import AddIcon from "@mui/icons-material/Add";
 import { useLocation } from "react-router-dom";
+import "./Detail.css";
 
 const Detail = () => {
   const query = useLocation();
@@ -16,7 +18,7 @@ const Detail = () => {
       <Navbar bgcolor={Colors.cadetBlue} color={Colors.white} mb={1} path="/">
         Detail
       </Navbar>
-      <Container>
+      <Container sx={{ position: "relative", height: "100vh" }}>
         <Box sx={{ flexGrow: 1 }} className="detail-page">
           <Grid container>
             <Grid
@@ -42,6 +44,19 @@ const Detail = () => {
             </Grid>
           </Grid>
         </Box>
+        <Fab
+          size="small"
+          sx={{
+            position: "absolute",
+            bottom: "10px",
+            right: "10px",
+            boxShadow: "none",
+          }}
+          color="secondary"
+          aria-label="add"
+        >
+          <AddIcon />
+        </Fab>
       </Container>
     </>
   );

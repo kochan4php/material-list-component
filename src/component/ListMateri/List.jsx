@@ -29,14 +29,10 @@ import {
   iconButtonStyle,
   navTitleStyle,
 } from "./style.js";
-import {
-  tingkatanSabuk,
-  kategori,
-  usia,
-  harga,
-  jenisFile,
-} from "./dataFilter.js";
+import { filter } from "./dataFilter.js";
 import _ from "lodash";
+
+const { tingkatanSabuk, kategori, usia, harga, jenisFile } = filter;
 
 const List = () => {
   const [open, setOpen] = React.useState(false);
@@ -65,7 +61,7 @@ const List = () => {
     }
 
     //? Filter logic
-    let fselected = [...filter];
+    const fselected = [...filter];
     let selectedTrue = filter.includes(e.target.value);
 
     if (selectedTrue) {
@@ -76,19 +72,29 @@ const List = () => {
       setFilter(fselected);
     }
 
-    let clickQuery = btn.value.toString().toLowerCase();
+    //! filter button query
+    const clickQuery = btn.value.toString().toLowerCase();
+    // const clickQuery = fselected.toString().toLowerCase();
+    // const clickQuery = filter.toString().toLowerCase();
+    // console.log(filter);
+    // console.log(clickQuery);
 
-    let listData = ["title", "info", "price", fselected].map((x, i) => {
-      return lotsOfData.filter((el) => {
-        if (el[x]) {
-          return el[x].toString().toLowerCase().indexOf(clickQuery) !== -1;
-        }
-      });
-    });
+    // revisi filter
+    const kategori = data.filter((d) => d.kategori === filter[0]);
+
+    let listData = ["title", "info", "price", "kategori", "jenisFile"].map(
+      (x, i) => {
+        return lotsOfData.filter((el) => {
+          if (el[x])
+            return el[x].toString().toLowerCase().indexOf(filter) !== -1;
+        });
+      }
+    );
 
     let dataset = _.maxBy(listData, function (o) {
       return o.length;
     });
+
     setData(dataset);
   };
 
@@ -115,9 +121,7 @@ const List = () => {
     setData(dataset);
   };
 
-  React.useEffect(() => {
-    console.log(filter);
-  }, [filter]);
+  console.log(filter);
 
   if (open) {
     return (
