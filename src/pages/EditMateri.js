@@ -10,21 +10,43 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
-import { useParams } from "react-router-dom";
-import Colors from "../Theme/Colors";
-import lotsOfData from "../component/ListMateri/dataList";
+import FormatBoldIcon from "@mui/icons-material/FormatBold";
+import FormatItalicIcon from "@mui/icons-material/FormatItalic";
+import FormatAlignLeftIcon from "@mui/icons-material/FormatAlignLeft";
+import FormatAlignCenterIcon from "@mui/icons-material/FormatAlignCenter";
+import FormatAlignRightIcon from "@mui/icons-material/FormatAlignRight";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import LinkIcon from "@mui/icons-material/Link";
+import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { filter } from "../Data/dataFilter";
 import Navbar from "../component/Navbar/Navbar";
+import Colors from "../Theme/Colors";
+
+const toggleBtn = [
+  { icon: <FormatBoldIcon />, value: "bold" },
+  { icon: <FormatItalicIcon />, value: "italic" },
+  { icon: <FormatAlignLeftIcon />, value: "left aligned" },
+  { icon: <FormatAlignCenterIcon />, value: "centered" },
+  { icon: <FormatAlignRightIcon />, value: "right aligned" },
+  { icon: <FormatQuoteIcon />, value: "quote" },
+  { icon: <LinkIcon />, value: "link" },
+  { icon: <ImageOutlinedIcon />, value: "image" },
+];
 
 export default function EditMateri() {
-  const param = useParams();
+  // const param = useParams();
 
   const [tingkatan, setTingkatan] = React.useState("");
   const [kategori, setKategori] = React.useState("");
   const [usia, setUsia] = React.useState("");
   const [detail, setDetail] = React.useState([]);
+  const [formats, setFormats] = React.useState(() => ["bold", "italic"]);
+  const handleFormat = (event, newFormats) => {
+    setFormats(newFormats);
+  };
 
   const handleTingkatan = (event) => {
     setTingkatan(event.target.value);
@@ -42,8 +64,8 @@ export default function EditMateri() {
   };
 
   React.useEffect(() => {
-    const detailData = lotsOfData.find((data) => data.id == param.id);
-    setDetail(detailData);
+    // const detailData = lotsOfData.find((data) => data.id == param.id);
+    // setDetail(detailData);
   }, []);
 
   console.log(detail);
@@ -122,6 +144,22 @@ export default function EditMateri() {
               </FormControl>
             </Grid>
             <Grid item xs={12} sx={{ mb: 2 }}>
+              <ToggleButtonGroup
+                value={formats}
+                onChange={handleFormat}
+                size="small"
+                fullWidth
+              >
+                {toggleBtn.map((item, index) => (
+                  <ToggleButton
+                    key={index}
+                    value={item.value}
+                    aria-label={item.value}
+                  >
+                    {item.icon}
+                  </ToggleButton>
+                ))}
+              </ToggleButtonGroup>
               <TextareaAutosize
                 aria-label="minimum height"
                 minRows={2}
