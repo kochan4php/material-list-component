@@ -1,65 +1,45 @@
-import React from "../../Assets/img/react.png";
-import Js from "../../Assets/img/javascript.png";
+import dachi from "../../Assets/img/dachi.png";
+import zuki from "../../Assets/img/zuki.png";
+import kata from "../../Assets/img/kata.png";
 
 let lotsOfData = [
   {
-    img: React,
-    title: "Materi Lengkap Ujian Kenaikan Sabuk Putih",
-    valueRating: "5",
+    id: 1,
+    img: zuki,
+    title: "Zuki (Pukulan)",
+    valueRating: 5,
     terjual: "70",
     price: "299.000,00",
-    info: "Terpopuler & Baru",
+    info: "Kihon",
     kategori: "Berbayar",
     jenisFile: "pdf",
+    deskripsi:
+      "Dalam karate, tsuki atau zuki adalah istilah yang digunakan untuk pukulan. Pukulan jenis ini biasanya dilakukan menggunakan 2 ruas jari depan, yang disebut dengan seiken (tinju depan).",
   },
   {
-    img: Js,
-    title: "Materi Lengkap Ujian Kenaikan Sabuk Cokelat",
-    valueRating: "4",
+    id: 2,
+    img: dachi,
+    title: "Dachi (Kuda-Kuda)",
+    valueRating: 4,
     terjual: "80",
     price: "399.000,00",
-    info: "Terlaris",
+    info: "Kihon",
     kategori: "Berbayar",
     jenisFile: "pdf",
+    deskripsi:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam eius recusandae rerum architecto accusamus magni tempora voluptates hic culpa, nostrum iure autem voluptatum molestiae. Praesentium sit saepe rerum quibusdam?",
   },
   {
-    img: React,
-    title: "Latihan Dasar Kumite",
-    valueRating: "4",
+    id: 3,
+    img: kata,
+    title: "Kata HEIAN SHODAN",
+    valueRating: 4,
     terjual: "150",
-    info: "Free",
+    info: "Kata",
     kategori: "Gratis",
     jenisFile: "video",
-  },
-  {
-    img: React,
-    title: "Latihan Dasar Kumite",
-    valueRating: "4",
-    terjual: "50",
-    price: "150.000,00",
-    info: "Terlaris",
-    kategori: "Berbayar",
-    jenisFile: "teks",
-  },
-  {
-    img: React,
-    title: "Latihan Dasar Sabuk Hijau",
-    valueRating: "4",
-    terjual: "50",
-    price: "150.000,00",
-    info: "Terlaris",
-    kategori: "Berbayar",
-    jenisFile: "teks",
-  },
-  {
-    img: React,
-    title: "Latihan Dasar Sabuk Kuning",
-    valueRating: "4",
-    terjual: "50",
-    price: "150.000,00",
-    info: "Terlaris",
-    kategori: "Berbayar",
-    jenisFile: "teks",
+    deskripsi:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam eius recusandae rerum architecto accusamus magni tempora voluptates hic culpa, nostrum iure autem voluptatum molestiae. Praesentium sit saepe rerum quibusdam?",
   },
 ];
 

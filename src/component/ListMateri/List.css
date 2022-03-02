@@ -21,16 +21,8 @@
   border: none;
 }
 
-#root .App .materi-page .materi-page-card .materi-page-card-img {
-  background-color: #333;
-  border-radius: 5px;
-  padding: 0.2em;
-}
-
 #root .App .materi-page .materi-page-card .materi-page-card-content {
   padding: 0.5em 1em;
-  /* padding-right: 0.7em; */
-  /* padding-top: 0.3em; */
 }
 
 #root
@@ -101,8 +93,10 @@
   .materi-page-card
   .materi-page-card-content
   .materi-page-card-content-info
-  .terlaris {
-  background-color: #ffcc66;
+  .kihon {
+  background-color: #f78104;
+  color: #000;
+  border-radius: 20px;
 }
 
 #root
@@ -111,8 +105,10 @@
   .materi-page-card
   .materi-page-card-content
   .materi-page-card-content-info
-  .free {
-  background-color: #00e6b8;
+  .kata {
+  background-color: #2499a0;
+  color: #000;
+  border-radius: 20px;
 }
 
 #root
@@ -127,6 +123,8 @@
 
 @media (max-width: 599px) {
   #root .App .materi-page .materi-page-card {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), -1px -1px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
   }
 }
