@@ -364,7 +364,7 @@ const List = () => {
                             component="img"
                             image={d.img}
                             alt={d.title}
-                            className="materi-page-card-img"
+                            sx={{ width: "110%", height: "80%" }}
                           />
                         )}
                         {d.video && (
@@ -379,8 +379,8 @@ const List = () => {
                       <Grid item xs={8}>
                         <CardContent className="materi-page-card-content">
                           <Link
-                            // to={`/detail/${d.id}`}
-                            to={`/detail`}
+                            to={`/detail/${index}`}
+                            // to="/detail"
                             className="materi-page-card-content-title"
                           >
                             <Typography
@@ -393,27 +393,6 @@ const List = () => {
                               {d.title}
                             </Typography>
                           </Link>
-                          {/* <Typography
-                            variant="body"
-                            className="materi-page-card-content-rating"
-                          >
-                            <Rating
-                              name="simple-controlled"
-                              value={d.valueRating}
-                              readOnly
-                              className="materi-page-card-content-rating-value"
-                            />
-                            &nbsp;
-                            <p>({d.terjual})</p>
-                          </Typography> */}
-                          {/* {d.price && (
-                            <Typography
-                              variant="body2"
-                              className="materi-page-card-content-price"
-                            >
-                              Rp {d.price}
-                            </Typography>
-                          )} */}
                           {d.info === "Kihon" && (
                             <Typography
                               variant="body2"
@@ -436,14 +415,29 @@ const List = () => {
                             variant="body"
                             className="materi-page-card-content-rating"
                           >
-                            <Rating
-                              name="simple-controlled"
-                              value={d.valueRating}
-                              readOnly
-                              className="materi-page-card-content-rating-value"
-                            />
-                            &nbsp;
-                            <p>({d.terjual})</p>
+                            {d.valueRating ? (
+                              <>
+                                <Rating
+                                  name="simple-controlled"
+                                  value={d.valueRating}
+                                  readOnly
+                                  className="materi-page-card-content-rating-value"
+                                />
+                                &nbsp;
+                                <p>({d.terjual})</p>
+                              </>
+                            ) : (
+                              <>
+                                <Rating
+                                  name="simple-controlled"
+                                  value={0}
+                                  readOnly
+                                  className="materi-page-card-content-rating-value"
+                                />
+                                &nbsp;
+                                <p>({d.terjual})</p>
+                              </>
+                            )}
                           </Typography>
                         </CardContent>
                       </Grid>

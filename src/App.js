@@ -11,11 +11,9 @@ export default function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={List} />
-          {/* <Route path="/detail/:id" component={Detail} /> */}
-          <Route path="/detail" component={Detail} />
-          {/* <Route path="/edit-materi/:id" component={EditMateri} /> */}
-          <Route path="/edit-materi" component={EditMateri} />
           <Route path="/tambah-materi" component={TambahMateri} />
+          <Route path="/detail/:id" component={Detail} />
+          <Route path="/edit-materi/:id" component={EditMateri} />
         </Switch>
       </div>
     </Router>
